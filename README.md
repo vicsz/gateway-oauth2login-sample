@@ -13,7 +13,7 @@ cf set-env my-gateway uaa-client-secret MY-UAA-CLIENT-SECRET
 cf vic-gateway restage
 ```
 
-Note: Replace MY-UAA-URL with the URL for your UAA Provider for example : https://myuaa.login.run.pivotal.io
+Note: replace MY-UAA-URL with the URL for your UAA Provider for example : https://myuaa.login.run.pivotal.io
 
 Note: replace MY-UAA-CLIENT-ID and MY-UAA-CLIENT-SECRET with your generated UAA Client ID and Secret
 
@@ -30,4 +30,4 @@ cf set-env vic-resource-server uaa-url MY-UAA-URL
 cf vic-gateway restage
 ```
 
-Note: Replace MY-UAA-URL with the URL for your UAA Provider for example : https://myuaa.login.run.pivotal.io
+Note: replace MY-UAA-URL with the URL for your UAA Provider for example : https://myuaa.login.run.pivotal.io
