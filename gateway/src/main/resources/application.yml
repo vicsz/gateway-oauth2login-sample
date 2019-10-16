@@ -1,0 +1,25 @@
+application:
+  resource-server-url: http://my-resource-server.cfapps.io
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          login-client:
+            provider: uaa
+            client-id: ${uaa-client-id}
+            client-secret: ${uaa-client-secret}
+            authorization-grant-type: authorization_code
+            redirect-uri-template: https://my-gateway.cfapps.io/login/oauth2/code/login-client
+            scope: openid,resource.read
+        provider:
+          uaa:
+            authorization-uri: ${uaa-url}/oauth/authorize
+            token-uri: ${uaa-url}/oauth/token
+            user-info-uri: ${uaa-url}/userinfo
+            user-name-attribute: sub
+            jwk-set-uri: ${uaa-url}/token_keys
