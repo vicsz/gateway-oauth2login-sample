@@ -10,7 +10,7 @@ cf push my-gateway -i 2 -p build/libs/gateway-1.0-SNAPSHOT.jar
 cf set-env my-gateway uaa-url MY-UAA-URL
 cf set-env my-gateway uaa-client-id MY-UAA-CLIENT-ID
 cf set-env my-gateway uaa-client-secret MY-UAA-CLIENT-SECRET
-cf vic-gateway restage
+cf my-gateway restage
 ```
 
 Note: replace MY-UAA-URL with the URL for your UAA Provider for example : https://myuaa.login.run.pivotal.io
@@ -27,9 +27,9 @@ Note: also ensure that you bind to a Redis Instance for Session Store
 
 ```sh
 gradle build
-cf push vic-resource-server -i 2 -p build/libs/resource-server-1.0-SNAPSHOT.jar 
-cf set-env vic-resource-server uaa-url MY-UAA-URL
-cf vic-gateway restage
+cf push my-resource-server -i 2 -p build/libs/resource-server-1.0-SNAPSHOT.jar 
+cf set-env my-resource-server uaa-url MY-UAA-URL
+cf my-gateway restage
 ```
 
 Note: replace MY-UAA-URL with the URL for your UAA Provider for example : https://myuaa.login.run.pivotal.io
