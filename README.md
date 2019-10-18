@@ -19,6 +19,8 @@ Note: replace MY-UAA-CLIENT-ID and MY-UAA-CLIENT-SECRET with your generated UAA 
 
 Note: in the application.yml update *resource-server-url* and *redirect-uri-template* if needed
 
+Note: also ensure that you bind to a Redis Instance for Session Store
+
 ## Build and Deploy the Resource Server
 
 ### From the resource server directory :

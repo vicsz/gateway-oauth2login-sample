@@ -38,6 +38,10 @@ dependencies {
 			"org.springframework.boot:spring-boot-starter-oauth2-client",
 			"org.springframework.cloud:spring-cloud-starter-gateway",
 			"org.springframework.cloud:spring-cloud-starter-security",
+
+			"org.springframework.session:spring-session-data-redis",
+			"org.springframework.boot:spring-boot-starter-data-redis",
+
 			// for sample controller in gateway
 			"org.springframework.boot:spring-boot-starter-thymeleaf",
 			"org.thymeleaf.extras:thymeleaf-extras-springsecurity5",
